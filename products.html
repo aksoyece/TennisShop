@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ürünler - Aksoy TennisShop</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -134,67 +134,7 @@
         <button onclick="sepetKapat()" style="margin-top:20px; width:100%; padding:12px; background:#1a1a2e; color:white; border:none; border-radius:8px; cursor:pointer; font-size:16px;">Kapat</button>
         <button onclick="sepetTemizle()" style="margin-top:10px; width:100%; padding:12px; background:#e74c3c; color:white; border:none; border-radius:8px; cursor:pointer; font-size:16px;">Sepeti Temizle</button>
     </div>
-
-    <script>
-        let sepet = [];
-
-        function sepeteEkle(isim, fiyat) {
-            sepet.push({ isim, fiyat: Number(fiyat) });
-            document.getElementById('sepet-sayi').textContent = sepet.length;
-        }
-
-        function sepetAc() {
-            let icerik = document.getElementById('sepet-icerik');
-            let toplam = 0;
-
-            if (sepet.length === 0) {
-                icerik.innerHTML = '<p style="color:#777;">Sepetiniz boş.</p>';
-            } else {
-                icerik.innerHTML = sepet.map((urun, index) =>
-                    `<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-                        <span>${urun.isim}</span>
-                        <div>
-                        <span style="font-weight:bold;">₺${urun.fiyat}</span>
-                        <button onclick="urunSil(${index})" style="margin-left:10px; background:#e74c3c; color:white; border:none; border-radius:5px; padding:3px 8px; cursor:pointer;">✕</button>
-                        </div>
-                    </div>`
-                ).join('');
-            }
-
-            document.getElementById('toplam-fiyat').textContent = toplam;
-            document.getElementById('sepet-popup').style.display = 'block';
-        }
-
-        function sepetKapat() {
-            document.getElementById('sepet-popup').style.display = 'none';
-        }
-
-        function sepetTemizle() {
-            sepet = [];
-            document.getElementById('sepet-sayi').textContent = 0;
-            document.getElementById('sepet-icerik').innerHTML = '<p style="color:#777;">Sepetiniz boş.</p>';
-            document.getElementById('toplam-fiyat').textContent = 0;
-        }
-        function urunSil(index) {
-            sepet.splice(index, 1);
-            document.getElementById('sepet-sayi').textContent = sepet.length;
-            sepetAc();
-        }
-
-        function filtrele(kategori){
-            const kartlar = document.querySelectorAll('.card');
-            kartlar.forEach (kart=> {
-                if (kategori == 'hepsi' || kart.dataset.category === kategori) {
-                    kart.style.display = 'block';
-                } else {
-                    kart.style.display = 'none';
-                }  
-            });
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');           
-        }
-
-    </script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>

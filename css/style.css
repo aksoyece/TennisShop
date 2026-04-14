@@ -15,14 +15,16 @@ nav {
     background-color: #1a1a2e;
     padding: 15px 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 50px;
 }
 
 nav .logo {
     color: #e8c848;
     font-size: 24px;
     font-weight: bold;
+    width: 250px;
 }
 
 nav ul {
@@ -92,6 +94,7 @@ nav ul li a:hover {
     gap: 30px;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: stretch;
 }
 
 .card {
@@ -101,6 +104,9 @@ nav ul li a:hover {
     width: 250px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card:hover {
@@ -115,16 +121,17 @@ nav ul li a:hover {
     margin-bottom: 15px;
 }
 
-
 .card h3 {
     font-size: 18px;
     margin-bottom: 8px;
+    min-height: 50px;
 }
 
 .card p {
     color: #777;
     font-size: 14px;
     margin-bottom: 15px;
+    flex-grow: 1;
 }
 
 .price {
@@ -157,6 +164,7 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
 /* SAYFA BAŞLIĞI */
 .page-header {
     background-color: #1a1a2e;
