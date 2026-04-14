@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürünler - Aksoy TennisShop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <nav>
+        <div class="logo">🎾 Aksoy TennisShop</div>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="products.html">Ürünler</a></li>
+            <li><a href="#" onclick="sepetAc()">🛒 Sepet (<span id="sepet-sayi">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <!-- SAYFA BAŞLIĞI -->
+    <section class="page-header">
+        <h1>Tüm Ürünler</h1>
+        <p>Kaliteli tenis ekipmanlarını keşfet</p>
+    </section>
+
+    <div class="filter-buttons">
+        <button onclick="filtrele('hepsi')" class="filter-btn active">Hepsi</button>
+        <button onclick="filtrele('raket')" class="filter-btn">Raket</button>
+        <button onclick="filtrele('ayakkabi')" class="filter-btn">Ayakkabı</button>
+        <button onclick="filtrele('kadin-kiyafet')" class="filter-btn">Kadın Kıyafet</button>
+        <button onclick="filtrele('erkek-kiyafet')" class="filter-btn">Erkek Kıyafet</button>
+        <button onclick="filtrele('top')" class="filter-btn">Top</button>
+        <button onclick="filtrele('aksesuar')" class="filter-btn">Aksesuar</button>
+        
+        
+    </div>
+
+
+    <!-- ÜRÜNLER -->
+    <section class="featured">
+        <div class="cards">
+            <div class="card" data-category="raket">
+            <img src="images/raket1.jpg" alt="Babolat Pure Aero">
+            <h3>Babolat Pure Aero</h3>
+            <p>Rafael Nadal'ın tercihi. Spin ve güç odaklı.</p>
+            <span class="price">₺12.499</span>
+            <button onclick="sepeteEkle('Babolat Pure Aero', 12499)">Sepete Ekle</button>
+        </div>
+        <div class="card" data-category="raket">
+            <img src="images/raket2.jpeg" alt="Wilson Blade 98">
+            <h3>Wilson Blade 98 V9</h3>
+            <p>Kontrol ve his odaklı profesyonel raket.</p>
+            <span class="price">₺13.250</span>
+            <button onclick="sepeteEkle('Wilson Blade 98 V9', 13250)">Sepete Ekle</button>
+        </div>
+            <div class="card" data-category="top">
+                <img src="images/top.jpg" alt="Tenis Topu">
+                <h3>Tenis Topu Seti</h3>
+                <p>4'lü antrenman topu.</p>
+                <span class="price">₺459</span>
+                <button onclick="sepeteEkle('Tenis Topu Seti', 459)">Sepete Ekle</button>
+            </div>
+            <div class="card" data-category="ayakkabi">
+                <img src="images/ayakkabi1.avif" alt="Nike Vapor 12">
+                <h3>Nike Vapor 12</h3>
+                <p>Carlos Alcaraz'ın tercihi. Hız ve güç için.</p>
+                <span class="price">₺8.499</span>
+                <button onclick="sepeteEkle('Nike Vapor 12', 8499)">Sepete Ekle</button>
+            </div>
+                <div class="card" data-category="ayakkabi">
+                <img src="images/ayakkabi2.avif" alt="Nike GP Challenge 1">
+                <h3>Nike Zoom GP Challenge 1</h3>
+                <p>Jannik Sinner'ın tercihi. Çift Air Zoom konfor.</p>
+                <span class="price">₺7.999</span>
+                <button onclick="sepeteEkle('Nike Zoom GP Challenge 1', 7999)">Sepete Ekle</button>
+            </div>
+            <div class="card" data-category="ayakkabi">
+                <img src="images/kadin-ayakkabi.avif" alt="Nike Zoom NXT">
+                <h3>Nike Zoom Vapor NXT</h3>
+                <p>Aryna Sabalenka'nın tercihi. Güç ve stabilite.</p>
+                <span class="price">₺7.999</span>
+                <button onclick="sepeteEkle('Nike Zoom Vapor NXT', 7999)">Sepete Ekle</button>
+            </div>
+            <div class="card" data-category="aksesuar">
+                <img src="images/canta.jpg" alt="Çanta">
+                <h3>Tenis Çantası</h3>
+                <p>2 raket kapasiteli.</p>
+                <span class="price">₺6.999</span>
+                <button onclick="sepeteEkle('Tenis Çantası', 6999)">Sepete Ekle</button>
+            </div>
+            <div class="card" data-category="aksesuar">
+                <img src="images/cap.jpg" alt="Şapka">
+                <h3>Tenis Şapkası</h3>
+                <p>UV korumalı, hafif tasarım.</p>
+                <span class="price">₺899</span>
+                <button onclick="sepeteEkle('Tenis Şapkası', 899)">Sepete Ekle</button>
+            </div>
+            <div class="card" data-category="kadin-kiyafet">
+                <img src="images/kadin-kiyafet.avif" alt="Kıyafet">
+                <h3>Kadın Kıyafet Seti</h3>
+                <p>Aryna Sabalenka'nın tercihi.Nefes alan kumaş, şık tasarım.</p>
+                <span class="price">₺6.499</span>
+                <button onclick="sepeteEkle('Kadın Kıyafet Seti', 6499)">Sepete Ekle</button>
+            </div>
+            <div class="card" data-category="erkek-kiyafet">
+                <img src="images/erkek-kiyafet1.avif" ust="Erkek alt">
+                <h3>Erkek Tenis Şortu</h3>
+                <p>Carlos Alcaraz'ın tercihi.Hafif ve havadar kort şortu.</p>
+                <span class="price">4.499</span>
+                <button onclick="sepeteEkle('Erkek Tenis Şortu',4499)">Sepete Ekle </button>
+            </div>
+            <div class="card" data-category="erkek-kiyafet">
+                <img src="images/erkek-kiyafet2.avif" ust="Erkek üst">
+                <h3>Erkek Tenis Şortu</h3>
+                <p>Carlos Alcaraz'ın tercihi.Hafif ve havadar kort tişörtü.</p>
+                <span class="price">4.499</span>
+                <button onclick="sepeteEkle('Erkek Tenis tişörtü',4499)">Sepete Ekle </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Aksoy TennisShop. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <!-- SEPET POPUP -->
+    <div id="sepet-popup" style="display:none; position:fixed; top:0; right:0; width:320px; height:100%; background:white; box-shadow:-4px 0 15px rgba(0,0,0,0.2); padding:30px; z-index:999; overflow-y:auto;">
+        <h2 style="margin-bottom:20px; color:#1a1a2e;">🛒 Sepetim</h2>
+        <div id="sepet-icerik"></div>
+        <hr style="margin:20px 0;">
+        <p style="font-size:18px; font-weight:bold; color:#1a1a2e;">Toplam: ₺<span id="toplam-fiyat">0</span></p>
+        <button onclick="sepetKapat()" style="margin-top:20px; width:100%; padding:12px; background:#1a1a2e; color:white; border:none; border-radius:8px; cursor:pointer; font-size:16px;">Kapat</button>
+        <button onclick="sepetTemizle()" style="margin-top:10px; width:100%; padding:12px; background:#e74c3c; color:white; border:none; border-radius:8px; cursor:pointer; font-size:16px;">Sepeti Temizle</button>
+    </div>
+
+    <script>
+        let sepet = [];
+
+        function sepeteEkle(isim, fiyat) {
+            sepet.push({ isim, fiyat: Number(fiyat) });
+            document.getElementById('sepet-sayi').textContent = sepet.length;
+        }
+
+        function sepetAc() {
+            let icerik = document.getElementById('sepet-icerik');
+            let toplam = 0;
+
+            if (sepet.length === 0) {
+                icerik.innerHTML = '<p style="color:#777;">Sepetiniz boş.</p>';
+            } else {
+                icerik.innerHTML = sepet.map((urun, index) =>
+                    `<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                        <span>${urun.isim}</span>
+                        <div>
+                        <span style="font-weight:bold;">₺${urun.fiyat}</span>
+                        <button onclick="urunSil(${index})" style="margin-left:10px; background:#e74c3c; color:white; border:none; border-radius:5px; padding:3px 8px; cursor:pointer;">✕</button>
+                        </div>
+                    </div>`
+                ).join('');
+            }
+
+            document.getElementById('toplam-fiyat').textContent = toplam;
+            document.getElementById('sepet-popup').style.display = 'block';
+        }
+
+        function sepetKapat() {
+            document.getElementById('sepet-popup').style.display = 'none';
+        }
+
+        function sepetTemizle() {
+            sepet = [];
+            document.getElementById('sepet-sayi').textContent = 0;
+            document.getElementById('sepet-icerik').innerHTML = '<p style="color:#777;">Sepetiniz boş.</p>';
+            document.getElementById('toplam-fiyat').textContent = 0;
+        }
+        function urunSil(index) {
+            sepet.splice(index, 1);
+            document.getElementById('sepet-sayi').textContent = sepet.length;
+            sepetAc();
+        }
+
+        function filtrele(kategori){
+            const kartlar = document.querySelectorAll('.card');
+            kartlar.forEach (kart=> {
+                if (kategori == 'hepsi' || kart.dataset.category === kategori) {
+                    kart.style.display = 'block';
+                } else {
+                    kart.style.display = 'none';
+                }  
+            });
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');           
+        }
+
+    </script>
+
+</body>
+</html>

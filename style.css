@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* NAV */
+nav {
+    background-color: #1a1a2e;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: #e8c848;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #e8c848;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+    color: #e8c848;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.btn {
+    background-color: #e8c848;
+    color: #1a1a2e;
+    padding: 14px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #d4b03a;
+}
+
+/* ÖNE ÇIKAN ÜRÜNLER */
+.featured {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #1a1a2e;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 250px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1a1a2e;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.card button {
+    background-color: #1a1a2e;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.card button:hover {
+    background-color: #e8c848;
+    color: #1a1a2e;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1a1a2e;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+}
+/* SAYFA BAŞLIĞI */
+.page-header {
+    background-color: #1a1a2e;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.page-header h1 {
+    font-size: 40px;
+    color: #e8c848;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #ccc;
+    font-size: 18px;
+}
+
+/* FİLTRE BUTONLARI */
+.filter-buttons {
+    text-align: center;
+    padding: 30px 20px 10px 20px;
+}
+
+.filter-btn {
+    background-color: white;
+    color: #1a1a2e;
+    border: 2px solid #1a1a2e;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 5px;
+}
+
+.filter-btn:hover {
+    background-color: #1a1a2e;
+    color: white;
+}
+
+.filter-btn.active {
+    background-color: #1a1a2e;
+    color: white;
+}
